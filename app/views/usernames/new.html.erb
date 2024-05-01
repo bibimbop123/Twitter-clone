@@ -1,0 +1,12 @@
+<div class="container-sm py-5" style="max-width: 540px">
+  <h2> Set your username </h2>
+  <%= form_with model: current_user, url: usernames_path, method: :post, local: true do |form| %>
+    <div class="mb-3">
+      <%= form.label :username %><br />
+      <%= form.text_field :username, class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= form.submit "Set username", class: "btn btn-primary btn-lg" %>
+    </div>
+  <% end %>
+</div>
