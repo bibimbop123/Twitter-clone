@@ -1,7 +1,7 @@
 
 <h1> Welcome <%= current_user.email %> </h1>
 <%= link_to "Sign out", destroy_user_session_path, data: {"turbo-method": :delete}, class: "btn btn-outline-primary btn-lg" %> 
-<%= form_with model: Tweet.new, url: tweets_path, method: :post, local: true do |form| %>
+<%= form_with model: Tweet.new, url: tweets#create, method: :post, local: true do |form| %>
     <%= form.text_field :content, class: "form-control", placeholder: "What's happening?" %>
     <%= form.submit "Tweet", class: "btn btn-primary btn-lg" %>
   <% end %>
